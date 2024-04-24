@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.1.9/p5.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.1.9/addons/p5.sound.min.js"></script>
+    
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <meta charset="utf-8" />
+
+  </head>
+  <body>
+    <h1>Welcome in Gorill.IA prototype</h1>
+    <p>As this project is still in its prototype phase, only words in french will be recorded here.</p>  
+    <h2>Try to say a word !</h2>
+    <p>Here are some keywords you can use to format the text:</p>
+      <ul>
+        <li>'Stop' or 'Go' will respectively 'stop' and 'start' the note taking.</li>
+        <li>'phrase au centre' / 'phrase à droite' / 'phrase à gauche' will change the alignement of last sentence.</li>
+        <li>'souligner phrase' / 'surligner phrase' / 'enlever décoration' change the decoration of the last sentence.</li>
+        <li>'Titre' will make the last sentence a title and in the contrary 'paragraphe' will make a title back to a paragraph</li>
+        <li>'effacer' will erase last sentence</li>
+        <li>If you pronounce the word 'Important', the sentence in which it is will be in bold</li>
+    </ul>
+    <p>(If the prototype don't seem to work, try again by refreshing the page and verify you allowed the page to record you.)</p>
+    <p><strong>Have Fun !</strong></p>
+    
+    
+    
+    <script src="sketch.js"></script>
+    <script src="p5speech.js"></script>
+    
+  </body>
+</html>
