@@ -1,0 +1,34 @@
+#Declare variables
+
+var foo;
+var myText;
+var keyword;
+var lastElement; 
+
+#Setup function and speech recognition
+function setup() {
+  
+#Speech recognition object, prompts microphone access on computer 
+  foo = new p5.SpeechRec('fr-FR'); #change language parameters
+  foo.onResult = showResult; #Bind callback function to trigger recognised speech
+  
+#Continuous variable will be used to enable a full-time recording
+  let continuous = true;
+ #When interimResults variable is true, the code record everything you do and it constructs sentences along with your speech
+  #When interimResults variable is false, it waits for you to finish to speak before showing the result
+  let interimResults = false; 
+  foo.start(continuous, interimResults); // Will start record the environment
+
+  #Set for voice listening
+}
+
+#To start watching the output of the model, 
+#Log the results inside the console thanks to resultString or add it directly inside your HTML body
+
+function showResult(speech) {
+
+#Logs results inside the console
+      console.log(foo.resultString);
+#Creates a p element to display text inside your html page
+			createP(foo.resultString);
+}
