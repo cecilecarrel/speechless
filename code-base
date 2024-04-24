@@ -32,3 +32,39 @@ function showResult(speech) {
 #Creates a p element to display text inside your html page
 			createP(foo.resultString);
 }
+#Voice input formats text in French
+#add code inside showResults function 
+#Make a formatting from a specific voice input such as 'phrase au centre' thanks to conditional statements
+
+if (foo.resultString == 'phrase au centre'){
+        lastElement = document.body.lastChild;
+        lastElement.style.textAlign = 'center';
+      }
+
+#Output: It will make last sentence said centered
+
+#2. Make a formatting based on a specific keyword inside a sentence thanks to .includes
+
+if (foo.resultString.includes('important')){
+        myText = foo.resultString; // log the result
+        var myP = createP(myText);
+        myP.style('font-weight', 'bold');
+     }
+
+#Output: If you say "important" in your sentence, the whole sentence will be in bold
+
+#3. Format a word when it is detected thanks to .replace() 
+
+if (foo.resultString.includes('intelligence artificielle')){
+        myText = foo.resultString; // log the result
+        var keyword = myText.replace('intelligence artificielle', '<b>intelligence artificielle</b>');
+				createP(keyword);
+      }
+
+#Output: If you say "intelligence artificielle" only this word will appear in bold inside your sentence
+
+#Bonus: Delete last sentence with 'effacer'
+if (foo.resultString == 'effacer'){
+        lastElement = document.body.lastChild;
+        lastElement.remove(); 
+      } 
